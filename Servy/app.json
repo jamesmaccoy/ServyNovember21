@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "servys",
+    "slug": "servys",
+    "scheme": "servys",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyAFdShW11pxYFmSWkLmQcOLm2QJRHp4A7s",
+          "authDomain": "servy-a8ef2.firebaseapp.com",
+          "databaseURL": "https://servy-a8ef2.firebaseio.com",
+          "projectId": "servy-a8ef2",
+          "storageBucket": "servy-a8ef2.appspot.com",
+          "messagingSenderId": "912113167041",
+          "appId": "1:912113167041:web:2f7128d2bdd90e55888240",
+          "measurementId": "G-3PV882S41B"
+        }
+      }
+    },
+    "description": "",
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "package": "com.rameezraja.serveys",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDIMee6Qk_MK3zr14cv_b3B3PE7HTnfQA8"
+        },
+        "googleSignIn": {
+          "apiKey": "AIzaSyDIMee6Qk_MK3zr14cv_b3B3PE7HTnfQA8",
+          "certificateHash": "F6578CFB17FF092FDE791601D51D7750F975A642"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "https://serveys.page.link/iho8",
+              "pathPrefix": "/iho8"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    }
+  }
+}

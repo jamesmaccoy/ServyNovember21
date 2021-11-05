@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "912113167041",
+    "firebase_url": "https://servy-a8ef2.firebaseio.com",
+    "project_id": "servy-a8ef2",
+    "storage_bucket": "servy-a8ef2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912113167041:android:bd5bd786cabe419e888240",
+        "android_client_info": {
+          "package_name": "com.rameezraja.serveys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912113167041-k4hcvu24c8kfd31fhvasacadrd0n9ml0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDbxSNk12vcmkxvb4yHC-CMco2AUUoZok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912113167041-k4hcvu24c8kfd31fhvasacadrd0n9ml0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "912113167041-6a4t6b1o8okc77dtefvggvtkbmg2k7ib.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "survey.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
