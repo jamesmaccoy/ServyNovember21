@@ -274,4 +274,14 @@ export const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 3,
   },
+
+   buttonaddrb:{position:'absolute',right:10,marginTop:20,
+ backgroundColor:'#61ad7f',paddingTop:8,zIndex:999,bottom:10,
+   paddingRight:15,paddingLeft:15,paddingBottom:8,borderRadius:50,
+   shadowColor: "#000",
+shadowOffset: {
+  width: 0,
+  height: 2,
+},
+},
 });

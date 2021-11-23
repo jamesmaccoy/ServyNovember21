@@ -98,7 +98,7 @@ const Drawer = ({
               </TouchableHighlight>
               <View style={styles.listnavwrapper}>
                 <TouchableOpacity style={styles.listnav}>
-                  <Ionicons style={styles.navicon} name="ios-hand" size={30} />
+                 <MaterialCommunityIcons name="hand-left"  style={styles.navicon} size={30} />
                   <Text style={styles.navicontxt}>Services</Text>
                 </TouchableOpacity>
 

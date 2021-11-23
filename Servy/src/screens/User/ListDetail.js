@@ -284,32 +284,7 @@ const ListDetail = ({ ...props }) => {
                   })}
               </View>
 
-              <View>
-                <TouchableOpacity
-                  onPress={() => {
-                    setModalBook(true);
-                  }}
-                  style={{
-                    paddingBottom: 100,
-                    position: "relative",
-                    width: "100%",
-                  }}
-                >
-                  <View style={styles.buttonaddrb}>
-                    <Ionicons name="ios-hand" size={30} color={"#fff"} />
-
-                    <Text
-                      style={{
-                        fontSize: 20,
-                        paddingLeft: 5,
-                        color: "#ffffff",
-                      }}
-                    >
-                      Book1
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+             
               <View>
                 <TouchableOpacity
                   onPress={() => {
@@ -626,8 +601,7 @@ const ListDetail = ({ ...props }) => {
                       */}
                       <Button onPress={handleBook} full style={styles.buttons}>
                         <Text style={{ position: "absolute", left: 10 }}>
-                          <Ionicons
-                            name="ios-hand"
+                           <MaterialCommunityIcons name="hand-left"
                             style={{ position: "absolute" }}
                             size={30}
                             color={"#fff"}
@@ -638,6 +612,7 @@ const ListDetail = ({ ...props }) => {
                     </View>
                   </View>
                 </View>
+
                 {show && (
         <DateTimePicker
           testID="dateTimePicker"
@@ -727,6 +702,29 @@ const ListDetail = ({ ...props }) => {
               </View>
             </Modal>
           </ScrollView>
+          <View  style={styles.buttonaddrb}>
+              <TouchableOpacity
+                  onPress={() => {
+                    setModalBook(true);
+                  }}
+                  style={styles.fixedbuttononscreen}
+          
+                >
+                  <View style={styles.simpleflexroe}>
+                    <MaterialCommunityIcons name="hand-left" size={30} color={"#fff"} />
+
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        paddingLeft: 5,
+                        color: "#ffffff",
+                      }}
+                    >
+                      Book
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+                </View>
           <Booking visible={visible} setVisible={setVisible} />
           <Filter
             route={props.route}
@@ -734,7 +732,9 @@ const ListDetail = ({ ...props }) => {
             setShowFilter={setShowFilter}
             modalVisible={showFilter}
           />
+
         </View>
+
       )}
     </>
   );

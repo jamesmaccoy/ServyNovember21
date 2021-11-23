@@ -131,7 +131,13 @@ export const styles = StyleSheet.create({
     paddingTop: 5,
     paddingBottom: 20,
     flexWrap: "wrap",
+    width:'33.333%'
   },
+
+    fixedbuttononscreen:{
+  elevation: 999,
+                    position: "relative",
+                    },
   input: {
     paddingTop: 10,
     paddingLeft: 10,
@@ -187,6 +193,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     borderBottomWidth: 1,
     paddingBottom: 10,
+
   },
 
   centeredView: {
@@ -231,8 +238,10 @@ export const styles = StyleSheet.create({
       
       iconinbtn:{   left:8,   position:'absolute',top:10,},
     textinbtn:{fontSize:18,fontWeight:'bold',color:'#61ad7f',textTransform:'uppercase',textAlign:'center'},
-     buttonaddrb:{display:'flex',
-     right:0,top:0,marginTop:20,flexDirection:'row',backgroundColor:'#61ad7f',paddingTop:18,paddingRight:25,paddingLeft:35,paddingBottom:18,borderRadius:50,shadowColor: "#000",justifyContent:'flex-end',
+   buttonaddrb:{position:'absolute',right:10,marginTop:20,
+ backgroundColor:'#61ad7f',paddingTop:18,zIndex:999,bottom:10,
+   paddingRight:25,paddingLeft:35,paddingBottom:18,borderRadius:50,
+   shadowColor: "#000",
 shadowOffset: {
   width: 0,
   height: 2,
@@ -241,7 +250,9 @@ shadowOpacity: 0.25,
 shadowRadius: 3.84,
 
 elevation: 5,},
-  titlereviewbtn:{flex: 1,flexDirection: "row", alignItems:'center', justifyContent:'space-between',  paddingBottom:10}, 
+simpleflexroe:{flexDirection:'row',justifyContent:'flex-end',},
+
+titlereviewbtn:{flex: 1,flexDirection: "row", alignItems:'center', justifyContent:'space-between',  paddingBottom:10}, 
   
   centeredBookView: {
     position: "absolute",    height: "100%",    bottom: 0,    width: "100%",    backgroundColor: "rgba(0,0,0,.5)",

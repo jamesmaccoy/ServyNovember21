@@ -8,7 +8,7 @@ import {
   FlatList,
   Modal,
   Dimensions,
-  RefreshControl,
+  RefreshControl,TextInput,
 } from "react-native";
 import Header from "../../components/User/Header";
 import ListingItem from "../../components/User/ListingItem";
@@ -355,21 +355,37 @@ const Home = ({ ...props }) => {
               <View style={styles.categorieslisting}>
                 {checkVisible === false ? (
                   <View style={styles.milesdata}>
-                    <Text style={styles.milesdatatxt}>
-                      Suggested Servey pro's in your area
-                    </Text>
+                    
+                      <View style={styles.milesdatain}>
+                      <TouchableOpacity
+                      activeOpacity={0.7}
+                      onPress={() =>
+                        navigation.navigate('Search')
+                      }
+                      style={styles.milesdatainlocationcl}
+                    >
+                        <MaterialCommunityIcons
+                          style={{ fontSize: 22, paddingTop: 0 }}
+                          name="filter-variant"
+                        />
+                         
+                     
+                    <Text style={styles.milesdatatxt} >452 Servy pros in your area</Text>
+                     </TouchableOpacity>
+                     </View>
                     <TouchableOpacity
                       activeOpacity={0.7}
                       onPress={handleFilter}
+                      style={styles.milesdatainlocation}
                     >
-                      <View style={styles.milesdatain}>
-                        <MaterialCommunityIcons
-                          style={{ fontSize: 22, paddingTop: 10 }}
-                          name="filter-variant"
+                    <Entypo
+                          style={{ fontSize: 22, paddingTop: 0 }}
+                          name="location-pin"
                         />
-                        <Text style={styles.milesStyle}> 2 Mile</Text>
-                      </View>
-                    </TouchableOpacity>
+                        
+                        <Text style={styles.milesStyle}>50km</Text>
+                        </TouchableOpacity>
+
                   </View>
                 ) : (
                   <View style={styles.milesdata}>

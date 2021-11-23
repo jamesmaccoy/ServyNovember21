@@ -219,6 +219,18 @@ const BookingScreen = ({ route }) => {
 
 
   return (
+  <View>
+    <View  style={styles.buttonaddrb}>
+              
+              <View style={{width: 100}}>
+                <TouchableOpacity onPress={showDateTimepicker} title="Edit" color="#61ad7f" style={{backgroundColor: "#61ad7f", borderRadius: 30, paddingHorizontal: 10, paddingVertical: 10}}>
+                  <View style={{flex: 1, alignSelf: "center" , flexDirection: "row", paddingHorizontal: 5, paddingVertical: 5 }}>
+                    <Entypo name={"edit"} size={18} color={'#fff'} />
+                    <Text style={{color: "white", paddingLeft: 10}}>Edit</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+            </View>
     <ScrollView style={styles.wrapper} ref={scrollRef}>
       <SnackBar
         setVisible={setVisible}
@@ -265,18 +277,11 @@ const BookingScreen = ({ route }) => {
             <View style={{padding: 0, flex: 1,  }}>
               <Text style={styles.bkheading}>Date & Time</Text>
             </View>
-            <View style={{flex: 1, flexDirection: "column", paddingRight: 5, paddingTop: 8 }}>
-              <Text style={{marginRight: 10, paddingTop: 15, fontSize: 14}}>{getDate(date, 'full')}</Text>
-              <View style={{width: 100}}>
-                <TouchableOpacity onPress={showDateTimepicker} title="Edit" color="#61ad7f" style={{backgroundColor: "#61ad7f", borderRadius: 30, paddingHorizontal: 10, paddingVertical: 10}}>
-                  <View style={{flex: 1, alignSelf: "center" , flexDirection: "row", paddingHorizontal: 5, paddingVertical: 5 }}>
-                    <Entypo name={"edit"} size={18} color={'#fff'} />
-                    <Text style={{color: "white", paddingLeft: 10}}>Edit</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-
+             <View style={{ flex: 1, alignSelf: "stretch" }}>
+            <View>
+           <Text style={{marginRight: 10, paddingTop: 15, fontSize: 14}}>{getDate(date, 'full')}</Text>
+           </View>
+   </View>
             {/*
             <View style={{flex: 1, alignSelf: "auto", flexDirection: "row", alignSelf: "stretch", paddingRight: 5 }}>
               <TouchableOpacity onPress={showDatepicker} title="Edit" color="#61ad7f" style={{backgroundColor: "#61ad7f", borderRadius: 20, paddingHorizontal: 10, paddingVertical: 10}}>
@@ -352,7 +357,7 @@ const BookingScreen = ({ route }) => {
 
         <TouchableOpacity style={styles.fawbtn}>
           <Text style={styles.iconinbtn}>
-            <Ionicons name="ios-hand" color={"#61ad7f"} size={35} />
+             <MaterialCommunityIcons name="hand-left"  color={"#61ad7f"} size={35} />
           </Text>
           <Text style={styles.textinbtn}>Frequently Asked Question</Text>
         </TouchableOpacity>
@@ -423,6 +428,7 @@ const BookingScreen = ({ route }) => {
       )}
     </ScrollView>
 
+            </View>
 
 );
 };

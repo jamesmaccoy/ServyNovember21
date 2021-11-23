@@ -85,13 +85,14 @@ const Filter = ({ ...props }) => {
                 paddingRight: 15,
                 paddingLeft: 15,
                 flexDirection: "row",
-                justifyContent: "space-between",
+
               }}
             >
               <MaterialCommunityIcons
                 style={styles.filter}
                 name="filter-variant"
               />
+              <Text>Filter</Text>
             </View>
             <View style={styles.filterInner}>
               <View style={styles.filterCategory}>
@@ -154,7 +155,7 @@ const Filter = ({ ...props }) => {
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handleFilter} style={styles.accept}>
-                  <Text style={{ fontWeight: "bold" }}>Accept</Text>
+                  <Text style={{ fontWeight: "bold",color:'#fff' }}>UPDATE</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -256,9 +257,9 @@ const styles = StyleSheet.create({
     color: "green",
   },
   accept: {
-    width: 80,
-    height: 25,
-    backgroundColor: "#a9a9a9",
+    width: '100%',
+    backgroundColor: "#5c9b84", 
+    padding:15,
     alignItems: "center",
   },
 });
