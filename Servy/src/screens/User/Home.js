@@ -32,6 +32,7 @@ import {
 } from "@expo/vector-icons";
 import { switchLoader } from "../../store/actions/User";
 import ProviderModal from "../../components/User/ProviderModal";
+import Search from "../../components/User/Search";
 import { styles } from "../../styles/User/HomeStyle";
 import Loader from "../Auth/Loader";
 import SnackBar from "../../components/Generic/SnackBar";
@@ -191,6 +192,7 @@ const Home = ({ ...props }) => {
       key: dynamicId,
     });
   };
+ const [modalSearch, setSearchVisible] = useState(false);
 
   useEffect(() => {
     if (dynamicId !== "") {
@@ -329,6 +331,7 @@ const Home = ({ ...props }) => {
                 visible={visible}
                 message={alertMessage}
               />
+               {checkVisible === true ?
               <ScrollView
                 style={styles.screenitem}
                 showsHorizontalScrollIndicator={false}
@@ -351,7 +354,7 @@ const Home = ({ ...props }) => {
                   </View>
                 ))}
               </ScrollView>
-
+: null}
               <View style={styles.categorieslisting}>
                 {checkVisible === false ? (
                   <View style={styles.milesdata}>
@@ -359,16 +362,14 @@ const Home = ({ ...props }) => {
                       <View style={styles.milesdatain}>
                       <TouchableOpacity
                       activeOpacity={0.7}
-                      onPress={() =>
-                        navigation.navigate('Search')
-                      }
+                      onPress={() => setSearchVisible(true)}
                       style={styles.milesdatainlocationcl}
                     >
                         <MaterialCommunityIcons
                           style={{ fontSize: 22, paddingTop: 0 }}
                           name="filter-variant"
                         />
-                         
+                          
                      
                     <Text style={styles.milesdatatxt} >452 Servy pros in your area</Text>
                      </TouchableOpacity>
@@ -536,6 +537,18 @@ const Home = ({ ...props }) => {
               />
             )}
           </View>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        style={styles.modal}
+        visible={modalSearch}
+        onRequestClose={() => {
+          setSearchVisible(!modalSearch);
+        }}
+      >
+      <Search  modalSearch={modalSearch}
+        setSearchVisible={setSearchVisible}/>
+       </Modal>
         </View>
       )}
     </View>
@@ -594,4 +607,5 @@ const items = [
     label: "Category 4",
     bgcolor: "#999",
   },
+
 ];

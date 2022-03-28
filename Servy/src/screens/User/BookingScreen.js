@@ -272,16 +272,16 @@ const BookingScreen = ({ route }) => {
       />
       <View style={styles.content}>
         <Text style={styles.bookingtitle}>Booking Details</Text>
-        <View style={{marginTop: 10,  flex: 1, alignSelf: "stretch" }}>
-          <View style={{padding: 0, flex: 1, alignSelf: "stretch", flexDirection: "row" }}>
-            <View style={{padding: 0, flex: 1,  }}>
-              <Text style={styles.bkheading}>Date & Time</Text>
+        <View style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View  style={styles.bookwrapti}>
+              <Text style={styles.bkheading}>Booking Date</Text>
             </View>
-             <View style={{ flex: 1, alignSelf: "stretch" }}>
+             <View style={styles.bookidetimr}>
             <View>
-           <Text style={{marginRight: 10, paddingTop: 15, fontSize: 14}}>{getDate(date, 'full')}</Text>
+           <Text style={styles.bookidetxtdate}>{getDate(date, 'date')}</Text>
            </View>
-   </View>
+          </View>
             {/*
             <View style={{flex: 1, alignSelf: "auto", flexDirection: "row", alignSelf: "stretch", paddingRight: 5 }}>
               <TouchableOpacity onPress={showDatepicker} title="Edit" color="#61ad7f" style={{backgroundColor: "#61ad7f", borderRadius: 20, paddingHorizontal: 10, paddingVertical: 10}}>
@@ -300,13 +300,26 @@ const BookingScreen = ({ route }) => {
             */}
           </View>
         </View>
-        <View style={{ flex: 1, alignSelf: "stretch", flexDirection: "row" }}>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
+        <View  style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View style={styles.bookwrapti}>
+              <Text style={styles.bkheading}>Time Slot</Text>
+            </View>
+             <View style={styles.bookidetimrt}>
             <View>
+           <Text style={styles.bookidetxttime}>{getDate(date, 'time')}</Text>
+           </View>
+          </View>
+          
+          </View>
+        </View>
+        <View  style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View  style={styles.bookwrapti}>
               <Text style={styles.bkheading}>Client:</Text>
             </View>
-          </View>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
+        
+          <View style={styles.bookidet}>
             <View>
               {userData != null && (
                 <Text style={styles.bkdesc}>
@@ -315,44 +328,48 @@ const BookingScreen = ({ route }) => {
               )}
             </View>
           </View>
-        </View>
-        <View style={{ flex: 1, alignSelf: "stretch", flexDirection: "row" }}>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
-            <View>
-              <Text style={styles.bkheading}>Sburb:</Text>
-            </View>
           </View>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
+        </View>
+        <View  style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View  style={styles.bookwrapti}>
+              <Text style={styles.bkheading}>Suburb:</Text>
+            </View>
+          
+          <View style={styles.bookidet}>
             <View>
               <Text style={styles.bkdesc}>Pinelands</Text>
             </View>
           </View>
         </View>
-        <View style={{ flex: 1, alignSelf: "stretch", flexDirection: "row" }}>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
-            <View>
+        </View>
+        <View  style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View  style={styles.bookwrapti}>
               <Text style={styles.bkheading}>Address:</Text>
             </View>
-          </View>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
+         
+          <View style={styles.bookidet}>
             <View>
               <Text style={styles.bkdesc}>
                 82 Hargrave road, Llandundo 7806 ZA
               </Text>
             </View>
           </View>
+          </View>
         </View>
-        <View style={{ flex: 1, alignSelf: "stretch", flexDirection: "row" }}>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
-            <View>
+        <View  style={styles.bookroe}>
+          <View style={styles.bookwrap}>
+            <View  style={styles.bookwrapti}>
               <Text style={styles.bkheading}>Booking Request On:</Text>
             </View>
-          </View>
-          <View style={{ flex: 1, alignSelf: "stretch" }}>
+          
+          <View style={styles.bookidet}>
             <View>
               <Text style={styles.bkdesc}>{getDate(item.date,'full')}</Text>
             </View>
           </View>
+        </View>
         </View>
 
         <TouchableOpacity style={styles.fawbtn}>

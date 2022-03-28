@@ -5,6 +5,7 @@ import {
   Text,
   ImageBackground,
   ScrollView,
+  Linking
 } from "react-native";
 import { Button, View } from "native-base";
 import { connect } from "react-redux";
@@ -21,10 +22,10 @@ const StartScreen = ({ navigation, signInWithGoogle }) => {
   };
 
   return (
-    <ScrollView>
+   
       <ImageBackground
         source={require("../../../assets/images/StartScreenBg.jpg")}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%",flex:1  }}
       >
         <View style={styles.container}>
           <View style={styles.centerContentStyle}>
@@ -93,7 +94,7 @@ const StartScreen = ({ navigation, signInWithGoogle }) => {
           </View>
         </View>
       </ImageBackground>
-    </ScrollView>
+  
   );
 };
 

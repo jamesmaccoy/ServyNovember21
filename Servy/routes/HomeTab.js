@@ -6,7 +6,7 @@ import Services from "../src/screens/User/Services";
 import ListDetail from "../src/screens/User/ListDetail";
 import Notification from "../src/screens/User/Notification";
 import SearchResult from "../src/screens/User/SearchResult";
-import Search from "../src/screens/User/search";
+
 import ProviderBookings from "../src/screens/User/ProviderBookings";
 const Stack = createStackNavigator();
 
@@ -50,14 +50,7 @@ const HomeTab = () => {
         component={SearchResult}
         initialParams={{ key: 4 }}
       />
-       <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
-        name="Search"
-        component={Search}
-
-      />
+       
       <Stack.Screen
         name="ProviderBookings"
         component={ProviderBookings}

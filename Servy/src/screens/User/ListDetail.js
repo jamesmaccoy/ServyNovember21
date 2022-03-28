@@ -212,11 +212,11 @@ const ListDetail = ({ ...props }) => {
                   <Text style={styles.title}>{data.category}</Text>
                 </View>
                 <View style={styles.icons}>
-                  <MaterialCommunityIcons
+                {/*  <MaterialCommunityIcons
                     style={styles.close}
                     name="filter-variant"
                     onPress={handleFilter}
-                  />
+                />*/}
                   <TouchableOpacity>
                     <ShareLink name={data.serviceName} />
                   </TouchableOpacity>
